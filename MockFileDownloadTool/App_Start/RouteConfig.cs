@@ -14,6 +14,15 @@ namespace MockFileDownloadTool
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "GenerateFile",
+                url: "CreateFile/{filename}/{fileContent}/{*contentType}",
+                defaults: new { controller = "Home", action = "GenerateFile",
+                    filename = UrlParameter.Optional,
+                    fileContent = UrlParameter.Optional,
+                    contentType = UrlParameter.Optional }
+                );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

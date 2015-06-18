@@ -6,6 +6,8 @@
     <div class="container">
         <h1 class="lead text-center">Mock File Downloader</h1>
         <p class="lead">This is a simple site to help test file downloads.  Specify the content and file type and we will make a simple file to download.</p>
+        <p>If you prefer a url format, you can generate a file by following this format; /CreateFile/{filename}/{file content}/{content type}</p>
+        <p>All the parameters on the url are optional</p>
     </div>
 
     @using (Html.BeginForm("GenerateFile", "Home"))
