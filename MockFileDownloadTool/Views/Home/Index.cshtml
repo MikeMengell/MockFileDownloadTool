@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Mock File Downloader";
+}
+
+<main tabindex="-1" class="xmasthead" role="main">
+    <div class="container">
+        <p class="lead">Mock File Downloader</p>
+        <p class="lead">This is a simple site to help test file downloads.  Specify the content and file type and we will make a simple file to download.</p>
+    </div>
+
+    @using (Html.BeginForm("GenerateFile", "Home")) {
+    <div class="container">
+        <div class="form-group">
+            <input type="text" class="form-control input-lg" id="extension" name="extension" placeholder="File Extension e.g. txt">
+        </div>
+        <div class="form-group">
+            <textarea class="form-control input-lg" rows="5" id="fileContent" name="fileContent" placeholder="File Contents e.g. { json: 'stuff' }"></textarea>
+        </div>
+        <div class="form-group">
+            <select class="form-control input-lg" name="contentType" id="contentType">
+                <option>text/plain</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Download your mock file</button>
+        </div>
+    </div>
+    }
+</main>
