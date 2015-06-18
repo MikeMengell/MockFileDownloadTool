@@ -15,11 +15,12 @@ namespace MockFileDownloadTool.Controllers
             return View();
         }
 
-        public FileContentResult GenerateFile(string filename, string fileContent, string contentType)
+        public FileContentResult GenerateFile(string filename, string fileContent, string contentType, string customContentType)
         {
-            filename = String.IsNullOrEmpty(filename) ? "foo.txt" : filename;
-            fileContent = String.IsNullOrEmpty(fileContent) ? "Hello World" : fileContent;
+            filename = string.IsNullOrEmpty(filename) ? "foo.txt" : filename;
+            fileContent = string.IsNullOrEmpty(fileContent) ? "Hello World" : fileContent;
             contentType = string.IsNullOrEmpty(contentType) ? "text/plain" : contentType;
+            contentType = string.IsNullOrEmpty(customContentType) ? contentType : customContentType;    //override list of custom content type was entered
 
             string info = fileContent;
             byte[] data = Encoding.UTF8.GetBytes(info);

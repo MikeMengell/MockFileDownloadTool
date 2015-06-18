@@ -14,3 +14,61 @@
 .lead {
     margin: 30px auto, 30px, auto;
 }
+
+.avatar {
+ /* Internet Explorer 10 */
+ display:-ms-flexbox;
+ -ms-flex-pack:center;
+ -ms-flex-align:center;
+
+ /* Firefox */
+ display:-moz-box;
+ -moz-box-pack:center;
+ -moz-box-align:center;
+
+ /* Safari, Opera, and Chrome */
+ display:-webkit-box;
+ -webkit-box-pack:center;
+ -webkit-box-align:center;
+
+ /* W3C */
+ display:box;
+ box-pack:center;
+ box-align:center;
+}
+
+.avatar img {
+    width: 80px;
+    border: 3px solid #FFF;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    border-radius: 100%;
+    position: relative;
+}
+
+footer {
+    margin-top: 80px;
+}
+
+@media (max-width: 1199px) {
+    .on-small-fix-form-spacing {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width:767px) {
+    .input-lg {
+        height: 35px;
+        padding: 6px 9px;
+        font-size: 13px;
+        line-height: 1.5;
+        border-radius: 3px;
+    }
+    select.input-lg {
+        height: 35px;
+        line-height: 35px;
+    }
+    textarea.input-lg,
+    select[multiple].input-lg {
+        height: auto;
+    }
+}

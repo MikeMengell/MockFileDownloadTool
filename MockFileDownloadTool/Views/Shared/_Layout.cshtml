@@ -21,10 +21,24 @@
 
     @RenderBody()
 
-    <footer>
-        <p>&copy; @DateTime.Now.Year - <a href="http://www.twitter.com/mikemengell">Mike Mengell</a>.</p>
-    </footer>
-    
+    <div class="container">
+        <footer>
+            <div class="col-xs-4 text-right">
+                <p>Mike Mengell</p>
+            </div>
+            <div class="col-xs-4">
+                <div class="avatar">
+                    <a href="http://twitter.com/mikemengell">
+                        <img alt="avatar" src="http://www.gravatar.com/avatar/d6f5e14d5bf6aa8efea2e822015dc937.png">
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-4 text-left">
+                <p>&copy; @DateTime.Now.Year</p>
+            </div>
+        </footer>
+    </div>
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
