@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Mock File Downloader";
+ViewBag.Title = "Mock File Downloader";
 }
 
 <main tabindex="-1" class="xmasthead" role="main">
@@ -14,152 +14,189 @@
     {
         <div class="container">
             <div class="form-group">
-                <input type="text" class="form-control input-lg" id="extension" name="extension" placeholder="File Extension e.g. txt">
+                <input type="text" class="form-control input-lg" id="filename" name="filename" placeholder="Filename e.g. test.txt">
             </div>
             <div class="form-group">
                 <textarea class="form-control input-lg" rows="5" id="fileContent" name="fileContent" placeholder="File Contents e.g. { json: 'stuff' }"></textarea>
             </div>
             <div class="form-group">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <select class="form-control input-lg on-small-fix-form-spacing" name="contentType" id="contentType">
-                            <option value="">Select Content-Type from list</option>
-                            <option>text/plain</option>
-                            <option>image/gif</option>
-                            <option>image/jpeg</option>
-                            <option>video/mpeg</option>
-                            <option>application/zip</option>
-                            <option>---Less Common Types---</option>
-                            <!--Less Common Content-Types-->
-                            <option>application/envoy</option>
-                            <option>application/fractals</option>
-                            <option>application/futuresplash</option>
-                            <option>application/hta</option>
-                            <option>application/internet-property-stream</option>
-                            <option>application/mac-binhex40</option>
-                            <option>application/msword</option>
-                            <option>application/octet-stream</option>
-                            <option>application/oda</option>
-                            <option>application/olescript</option>
-                            <option>application/pdf</option>
-                            <option>application/pics-rules</option>
-                            <option>application/pkcs10</option>
-                            <option>application/pkix-crl</option>
-                            <option>application/postscript</option>
-                            <option>application/rtf</option>
-                            <option>application/set-payment-initiation</option>
-                            <option>application/set-registration-initiation</option>
-                            <option>application/vnd.ms-excel</option>
-                            <option>application/vnd.ms-outlook</option>
-                            <option>application/vnd.ms-pkicertstore</option>
-                            <option>application/vnd.ms-pkiseccat</option>
-                            <option>application/vnd.ms-pkistl</option>
-                            <option>application/vnd.ms-powerpoint</option>
-                            <option>application/vnd.ms-project</option>
-                            <option>application/vnd.ms-works</option>
-                            <option>application/winhlp</option>
-                            <option>application/x-bcpio</option>
-                            <option>application/x-cdf</option>
-                            <option>application/x-compress</option>
-                            <option>application/x-compressed</option>
-                            <option>application/x-cpio</option>
-                            <option>application/x-csh</option>
-                            <option>application/x-director</option>
-                            <option>application/x-dvi</option>
-                            <option>application/x-gtar</option>
-                            <option>application/x-gzip</option>
-                            <option>application/x-hdf</option>
-                            <option>application/x-internet-signup</option>
-                            <option>application/x-iphone</option>
-                            <option>application/x-javascript</option>
-                            <option>application/x-latex</option>
-                            <option>application/x-msaccess</option>
-                            <option>application/x-mscardfile</option>
-                            <option>application/x-msclip</option>
-                            <option>application/x-msdownload</option>
-                            <option>application/x-msmediaview</option>
-                            <option>application/x-msmetafile</option>
-                            <option>application/x-msmoney</option>
-                            <option>application/x-mspublisher</option>
-                            <option>application/x-msschedule</option>
-                            <option>application/x-msterminal</option>
-                            <option>application/x-mswrite</option>
-                            <option>application/x-netcdf</option>
-                            <option>application/x-perfmon</option>
-                            <option>application/x-pkcs12</option>
-                            <option>application/x-pkcs7-certificates</option>
-                            <option>application/x-pkcs7-certreqresp</option>
-                            <option>application/x-pkcs7-mime</option>
-                            <option>application/x-pkcs7-signature</option>
-                            <option>application/x-sh</option>
-                            <option>application/x-shar</option>
-                            <option>application/x-shockwave-flash</option>
-                            <option>application/x-stuffit</option>
-                            <option>application/x-sv4cpio</option>
-                            <option>application/x-sv4crc</option>
-                            <option>application/x-tar</option>
-                            <option>application/x-tcl</option>
-                            <option>application/x-tex</option>
-                            <option>application/x-texinfo</option>
-                            <option>application/x-troff</option>
-                            <option>application/x-troff-man</option>
-                            <option>application/x-troff-me</option>
-                            <option>application/x-troff-ms</option>
-                            <option>application/x-ustar</option>
-                            <option>application/x-wais-source</option>
-                            <option>application/x-x509-ca-cert</option>
-                            <option>application/ynd.ms-pkipko</option>
-                            <option>application/zip</option>
-                            <option>audio/basic</option>
-                            <option>audio/mid</option>
-                            <option>audio/mpeg</option>
-                            <option>audio/x-aiff</option>
-                            <option>audio/x-mpegurl</option>
-                            <option>audio/x-pn-realaudio</option>
-                            <option>audio/x-wav</option>
-                            <option>image/bmp</option>
-                            <option>image/cis-cod</option>
-                            <option>image/gif</option>
-                            <option>image/ief</option>
-                            <option>image/jpeg</option>
-                            <option>image/pipeg</option>
-                            <option>image/svg+xml</option>
-                            <option>image/tiff</option>
-                            <option>image/x-cmu-raster</option>
-                            <option>image/x-cmx</option>
-                            <option>image/x-icon</option>
-                            <option>image/x-portable-anymap</option>
-                            <option>image/x-portable-bitmap</option>
-                            <option>image/x-portable-graymap</option>
-                            <option>image/x-portable-pixmap</option>
-                            <option>image/x-rgb</option>
-                            <option>image/x-xbitmap</option>
-                            <option>image/x-xpixmap</option>
-                            <option>image/x-xwindowdump</option>
-                            <option>message/rfc822</option>
-                            <option>text/css</option>
-                            <option>text/h323</option>
-                            <option>text/html</option>
-                            <option>text/iuls</option>
-                            <option>text/plain</option>
-                            <option>text/richtext</option>
-                            <option>text/scriptlet</option>
-                            <option>text/tab-separated-values</option>
-                            <option>text/webviewhtml</option>
-                            <option>text/x-component</option>
-                            <option>text/x-setext</option>
-                            <option>text/x-vcard</option>
-                            <option>video/mpeg</option>
-                            <option>video/quicktime</option>
-                            <option>video/x-la-asf</option>
-                            <option>video/x-ms-asf</option>
-                            <option>video/x-msvideo</option>
-                            <option>video/x-sgi-movie</option>
-                            <option>x-world/x-vrml</option>
-                        </select>
+                <button class="btn btn-warning btn-block" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Advanced Options
+                </button>
+            </div>
+            <div class="collapse" id="collapseExample">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <select class="form-control input-lg on-small-fix-form-spacing" name="contentType" id="contentType">
+                                <option value="">Select Content-Type from list</option>
+                                <option>text/plain</option>
+                                <option>image/gif</option>
+                                <option>image/jpeg</option>
+                                <option>video/mpeg</option>
+                                <option>application/zip</option>
+                                <option>---Less Common Types---</option>
+                                <!--Less Common Content-Types-->
+                                <option>application/envoy</option>
+                                <option>application/fractals</option>
+                                <option>application/futuresplash</option>
+                                <option>application/hta</option>
+                                <option>application/internet-property-stream</option>
+                                <option>application/mac-binhex40</option>
+                                <option>application/msword</option>
+                                <option>application/octet-stream</option>
+                                <option>application/oda</option>
+                                <option>application/olescript</option>
+                                <option>application/pdf</option>
+                                <option>application/pics-rules</option>
+                                <option>application/pkcs10</option>
+                                <option>application/pkix-crl</option>
+                                <option>application/postscript</option>
+                                <option>application/rtf</option>
+                                <option>application/set-payment-initiation</option>
+                                <option>application/set-registration-initiation</option>
+                                <option>application/vnd.ms-excel</option>
+                                <option>application/vnd.ms-outlook</option>
+                                <option>application/vnd.ms-pkicertstore</option>
+                                <option>application/vnd.ms-pkiseccat</option>
+                                <option>application/vnd.ms-pkistl</option>
+                                <option>application/vnd.ms-powerpoint</option>
+                                <option>application/vnd.ms-project</option>
+                                <option>application/vnd.ms-works</option>
+                                <option>application/winhlp</option>
+                                <option>application/x-bcpio</option>
+                                <option>application/x-cdf</option>
+                                <option>application/x-compress</option>
+                                <option>application/x-compressed</option>
+                                <option>application/x-cpio</option>
+                                <option>application/x-csh</option>
+                                <option>application/x-director</option>
+                                <option>application/x-dvi</option>
+                                <option>application/x-gtar</option>
+                                <option>application/x-gzip</option>
+                                <option>application/x-hdf</option>
+                                <option>application/x-internet-signup</option>
+                                <option>application/x-iphone</option>
+                                <option>application/x-javascript</option>
+                                <option>application/x-latex</option>
+                                <option>application/x-msaccess</option>
+                                <option>application/x-mscardfile</option>
+                                <option>application/x-msclip</option>
+                                <option>application/x-msdownload</option>
+                                <option>application/x-msmediaview</option>
+                                <option>application/x-msmetafile</option>
+                                <option>application/x-msmoney</option>
+                                <option>application/x-mspublisher</option>
+                                <option>application/x-msschedule</option>
+                                <option>application/x-msterminal</option>
+                                <option>application/x-mswrite</option>
+                                <option>application/x-netcdf</option>
+                                <option>application/x-perfmon</option>
+                                <option>application/x-pkcs12</option>
+                                <option>application/x-pkcs7-certificates</option>
+                                <option>application/x-pkcs7-certreqresp</option>
+                                <option>application/x-pkcs7-mime</option>
+                                <option>application/x-pkcs7-signature</option>
+                                <option>application/x-sh</option>
+                                <option>application/x-shar</option>
+                                <option>application/x-shockwave-flash</option>
+                                <option>application/x-stuffit</option>
+                                <option>application/x-sv4cpio</option>
+                                <option>application/x-sv4crc</option>
+                                <option>application/x-tar</option>
+                                <option>application/x-tcl</option>
+                                <option>application/x-tex</option>
+                                <option>application/x-texinfo</option>
+                                <option>application/x-troff</option>
+                                <option>application/x-troff-man</option>
+                                <option>application/x-troff-me</option>
+                                <option>application/x-troff-ms</option>
+                                <option>application/x-ustar</option>
+                                <option>application/x-wais-source</option>
+                                <option>application/x-x509-ca-cert</option>
+                                <option>application/ynd.ms-pkipko</option>
+                                <option>application/zip</option>
+                                <option>audio/basic</option>
+                                <option>audio/mid</option>
+                                <option>audio/mpeg</option>
+                                <option>audio/x-aiff</option>
+                                <option>audio/x-mpegurl</option>
+                                <option>audio/x-pn-realaudio</option>
+                                <option>audio/x-wav</option>
+                                <option>image/bmp</option>
+                                <option>image/cis-cod</option>
+                                <option>image/gif</option>
+                                <option>image/ief</option>
+                                <option>image/jpeg</option>
+                                <option>image/pipeg</option>
+                                <option>image/svg+xml</option>
+                                <option>image/tiff</option>
+                                <option>image/x-cmu-raster</option>
+                                <option>image/x-cmx</option>
+                                <option>image/x-icon</option>
+                                <option>image/x-portable-anymap</option>
+                                <option>image/x-portable-bitmap</option>
+                                <option>image/x-portable-graymap</option>
+                                <option>image/x-portable-pixmap</option>
+                                <option>image/x-rgb</option>
+                                <option>image/x-xbitmap</option>
+                                <option>image/x-xpixmap</option>
+                                <option>image/x-xwindowdump</option>
+                                <option>message/rfc822</option>
+                                <option>text/css</option>
+                                <option>text/h323</option>
+                                <option>text/html</option>
+                                <option>text/iuls</option>
+                                <option>text/plain</option>
+                                <option>text/richtext</option>
+                                <option>text/scriptlet</option>
+                                <option>text/tab-separated-values</option>
+                                <option>text/webviewhtml</option>
+                                <option>text/x-component</option>
+                                <option>text/x-setext</option>
+                                <option>text/x-vcard</option>
+                                <option>video/mpeg</option>
+                                <option>video/quicktime</option>
+                                <option>video/x-la-asf</option>
+                                <option>video/x-ms-asf</option>
+                                <option>video/x-msvideo</option>
+                                <option>video/x-sgi-movie</option>
+                                <option>x-world/x-vrml</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control input-lg" name="customContentType" id="customContentType" placeholder="Or enter own Content-Type e.g. text/plain" />
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        <input type="text" class="form-control input-lg" name="customContentType" id="customContentType" placeholder="Or enter own Content-Type e.g. text/plain" />
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control input-lg" id="headerName1" name="headerName1" placeholder="Additional Header Key" />
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control input-lg" id="headerValue1" name="headerValue1" placeholder="Additional Header Value" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control input-lg" id="headerName2" name="headerName2" placeholder="Additional Header Key" />
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control input-lg" id="headerValue2" name="headerValue2" placeholder="Additional Header Value" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control input-lg" id="headerName3" name="headerName3" placeholder="Additional Header Key" />
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control input-lg" id="headerValue3" name="headerValue3" placeholder="Additional Header Value" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -167,5 +204,5 @@
                 <button type="submit" class="btn btn-primary btn-lg btn-block">Download your mock file</button>
             </div>
         </div>
-        }
-    </main>
+    }
+</main>
