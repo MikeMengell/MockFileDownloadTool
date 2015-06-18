@@ -25,19 +25,21 @@ namespace MockFileDownloadTool.Controllers
 
             string info = fileContent;
             byte[] data = Encoding.UTF8.GetBytes(info);
-            if (string.IsNullOrEmpty(model.HeaderName1) && string.IsNullOrEmpty(model.HeaderValue1))
+            if (!string.IsNullOrEmpty(model.HeaderName1) && !string.IsNullOrEmpty(model.HeaderValue1))
             {
-                Response.AddHeader(model.HeaderName1, model.HeaderValue1);
+                ControllerContext.HttpContext.Response.Headers.Add(model.HeaderName1, model.HeaderValue1);
             }
-            if (string.IsNullOrEmpty(model.HeaderName2) && string.IsNullOrEmpty(model.HeaderValue2))
+            if (!string.IsNullOrEmpty(model.HeaderName2) && !string.IsNullOrEmpty(model.HeaderValue2))
             {
-                Response.AddHeader(model.HeaderName2, model.HeaderValue2);
+                ControllerContext.HttpContext.Response.Headers.Add(model.HeaderName2, model.HeaderValue2);
             }
-            if (string.IsNullOrEmpty(model.HeaderName3) && string.IsNullOrEmpty(model.HeaderValue3))
+            if (!string.IsNullOrEmpty(model.HeaderName3) && !string.IsNullOrEmpty(model.HeaderValue3))
             {
-                Response.AddHeader(model.HeaderName3, model.HeaderValue3);
+                ControllerContext.HttpContext.Response.Headers.Add(model.HeaderName3, model.HeaderValue3);
             }
-            return File(data, contentType, filename);
+            var mockFile = File(data, contentType, filename);
+
+            return mockFile;
         }
     }
 }
